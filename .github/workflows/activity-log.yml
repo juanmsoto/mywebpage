@@ -14,4 +14,4 @@ jobs:
           GH_USERNAME: juanmsoto
           COMMIT_MSG: "chore: update activity log"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
