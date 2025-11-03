@@ -3,6 +3,6 @@
 This repo shows GitHub Pages + CI which autoupdates README with recent activity.
 
 ## Recent Activity
-<!--ACTIVITY-LOG:START-->
+<!--START_SECTION:activity-->
 
-<!--ACTIVITY-LOG:END-->
+<!--END_SECTION:activity-->
