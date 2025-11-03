@@ -1,0 +1,19 @@
+name: Activity Log
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+jobs:
+  update-readme:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update README with recent activity
+        uses: jamesgeorge007/github-activity-readme@v0.3.0
+        with:
+          COMMIT_MSG: "chore: update activity log"
+          MAX_LINES: 10
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
