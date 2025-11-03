@@ -1,8 +1,6 @@
 name: Activity Log
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 */12 * * *"
 jobs:
   update-readme:
     permissions:
@@ -13,7 +11,7 @@ jobs:
       - name: Update README with recent activity
         uses: jamesgeorge007/github-activity-readme@v0.3.0
         with:
+          GH_USERNAME: juanmsoto
           COMMIT_MSG: "chore: update activity log"
-          MAX_LINES: 10
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
